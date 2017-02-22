@@ -23,6 +23,8 @@ var responseHandler = function(profileObj) {
     profileStr += '<h1 class="name">' + name + '</h1>'
     profileStr += '<p class="username">' + username + '</p>'
     profileStr += '<p class="bio">' + bio + '</p>'
+    // ADD ME ---> <button type="button">FOLLOW</button>
+    profileStr += '<hr>'
     profileStr += '<p class="location">' + locationEl + '</p>'
     profileStr += '<p class="website"><a href="' + website + '">' + website + '</a></p>'
     profileStr += '<p class="blog"><a href="' + blog + '">' + blog + '</a></p>'
@@ -43,8 +45,9 @@ var responseHandlerTwo = function(repoArray) {
         var repoNode = document.createElement('div')
         var currentObj = repoArray[i]
         var repoURL = repoArray[i].html_url
-        repoNode.innerHTML += '<h1><a class="repo_name" href="' + repoURL + '">' + currentObj.name + '</a></h1>'
-        repoNode.innerHTML += '<p>' + currentObj.description + '</p><hr><br />'
+        repoNode.innerHTML += '<h1><a class="repo_title" href="' + repoURL + '">' + currentObj.name + '</a></h1>'
+        repoNode.innerHTML += '<p class="repo_description">' + currentObj.description + '</p>'
+        repoNode.innerHTML += '<p class="repo_language"><ul><li><span>' + currentObj.language + '</span></li></ul></p><hr></div><br />'
         repo_column.appendChild(repoNode)
     }
 }

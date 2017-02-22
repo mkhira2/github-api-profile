@@ -1,6 +1,7 @@
 /*--------------------------------------------------
 ALWAYS INCLUDE
 --------------------------------------------------*/
+
 * {
     box-sizing: border-box;
 }
@@ -9,13 +10,14 @@ img {
     max-width: 100%;
 }
 
+
 /*--------------------------------------------------
 PAGE RULES
 --------------------------------------------------*/
 
 .container {
     display: flex;
-    padding: 50px 150px 0 150px;
+    padding: 50px 125px 0 125px;
 }
 
 a {
@@ -27,6 +29,11 @@ a:hover {
     text-decoration: underline;
 }
 
+p {
+    color: grey;
+}
+
+
 /*--------------------------------------------------
 HEADER
 --------------------------------------------------*/
@@ -36,37 +43,28 @@ HEADER
     color: silver;
     max-width: 100%;
     height: 100px;
-    position: relative;
-}
-
-.header h1 {
-    position: absolute;
-    top: 10%;
-    left: 40%;
-}
-
-.header h2 {
-    position: absolute;
-    top: 30%;
-    left: 60%;
-    font-size: 14px;
+    text-align: center;
+    word-spacing: 50px;
 }
 
 .search {
-    position: absolute;
-    top: 35%;
-    left: 20%;
     height: 30%;
     font-size: 14px;
+    display: inline-block;
 }
+
+.header h1 {
+    display: inline-block;
+}
+
 
 /*--------------------------------------------------
 PROFILE COLUMN
 --------------------------------------------------*/
 
 .profile_column {
-	width: 35%;
-	margin-right: 30px;
+    width: 35%;
+    margin-right: 30px;
 }
 
 .profile_column h1 {
@@ -89,55 +87,51 @@ PROFILE COLUMN
     margin-top: 0;
 }
 
+.follow {
+    width: 80%;
+}
+
 
 /*--------------------------------------------------
 REPO COLUMN
 --------------------------------------------------*/
+
 .repo_column h1 {
-	font-size: 24px;
+    font-size: 24px;
 }
 
-.repo_column p {
+.repo_column li {
+    color: fuchsia;
+}
+
+.repo_column li span {
     color: grey;
 }
+
 
 /*--------------------------------------------------
 MEDIA QUERY
 --------------------------------------------------*/
 
 @media (max-width: 850px) {
-
-	.header .search {
-		display: none;
-	}
-
-	.header h1 {
-		color: white;
-	}
-
-	.header h2 {
-		display: none;
-	}
-
-	.container {
-		display: block;
-		text-align: center;
-	}
-
-	.profile_column {
-		width: 100%;
-		padding-bottom: 20px;
-		border-bottom: 1px solid grey;
-	}
-
-	.profilePic {
-		text-align: center;
-		width: 50%;
-	}
+    .header .search {
+        display: none;
+    }
+    .header {
+        color: white;
+        text-align: center;
+    }
+    .container {
+        display: block;
+        text-align: center;
+    }
+    .profile_column {
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid darkgrey;
+    }
+    .profilePic {
+        text-align: center;
+        width: 50%;
+    }
 }
-
-
-
-
-
-
