@@ -47,7 +47,7 @@ HEADER
     word-spacing: 50px;
 }
 
-.search {
+.searchBar {
     height: 30%;
     font-size: 14px;
     display: inline-block;
@@ -88,9 +88,12 @@ PROFILE COLUMN
 }
 
 .follow {
-    width: 80%;
+    width: 70%;
+    height: 1%;
+    color: black;
+    background: grey;
+    margin: 10px 0 0 0;
 }
-
 
 /*--------------------------------------------------
 REPO COLUMN
@@ -114,7 +117,7 @@ MEDIA QUERY
 --------------------------------------------------*/
 
 @media (max-width: 850px) {
-    .header .search {
+    .header .searchBar {
         display: none;
     }
     .header {
